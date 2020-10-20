@@ -9,7 +9,7 @@ package intjavaexinheritance;
  *
  * @author Aline Vetrov
  */
-public class Pet {
+public class Pet implements IPet {
     public boolean hasCollar;
     
     private String name;
@@ -20,10 +20,6 @@ public class Pet {
         setName(name);
         setType(type);
         setNumOfLegs(numOfLegs);
-    }
-    
-    public void makeSound() {
-        p("I <blank>");
     }
     
     public void p(Object obj) {
@@ -55,6 +51,16 @@ public class Pet {
         this.numOfLegs = numOfLegs;
     }
 //</editor-fold>
+
+    @Override
+    public void makeSound() {
+        p("I blank");
+    }
+
+    @Override
+    public void move() {
+        p("I move");
+    }
     
     
 }
